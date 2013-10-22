@@ -1,0 +1,18 @@
+python: 3.2
+
+install:
+  - pip install bottle
+  - pip install yaml
+  - pip install gevent
+  - pip install uiautomator
+
+before_script:
+  - echo "Before script..."
+
+script:
+  - ls -l
+  - echo "script"
+  - python --version
+
+after_script:
+  - echo "after_script"
