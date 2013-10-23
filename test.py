@@ -7,7 +7,7 @@ import os
 def settings():
     if d(text='设置').exists:
         d(text='设置').click()
-        d.screenshot(os.path.join(os.environ['WORKSPACE'], 'screenshot.png'))
+        d.screenshot(os.path.join(os.environ.get('WORKSPACE', '.'), 'screenshot.png'))
         d.press.back()
 
 for i in range(20):
@@ -17,3 +17,4 @@ for i in range(20):
     print("Swipe right")
     d().swipe.right()
     d.press.home()
+    settings()
