@@ -1,4 +1,11 @@
 from uiautomator import device as d
+import os
+
+def settings():
+    if d(text='设置').exists:
+        d(text='设置').click()
+        d.screenshot(os.path.join(os.environ['WORKSPACE'], 'screenshot.png'))
+        d.press.back()
 
 for i in range(20):
     d.screen.on()
