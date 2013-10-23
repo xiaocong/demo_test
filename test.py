@@ -1,6 +1,6 @@
 from uiautomator import device as d
 
-for i in range(1000):
+for i in range(20):
     d.screen.on()
     print("Swipe left")
     d().swipe.left()
