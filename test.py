@@ -10,6 +10,10 @@ def settings():
         d.screenshot(os.path.join(os.environ.get('WORKSPACE', '.'), 'screenshot.png'))
         d.press.back()
 
+
+for k in os.environ:
+    print("%s:\t%s" % (k, os.environ[k]))
+
 for i in range(20):
     d.screen.on()
     print("Swipe left")
