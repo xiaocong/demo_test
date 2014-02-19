@@ -14,7 +14,7 @@ def settings():
 for k in os.environ:
     print("%s:\t%s" % (k, os.environ[k]))
 
-for i in range(20):
+for i in range(20000):
     d.screen.on()
     print("Swipe left")
     d().swipe.left()
