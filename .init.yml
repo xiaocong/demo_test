@@ -8,7 +8,6 @@ env:
     options: ['a', 'b', 'c']
     fix: true
   exclusive:
-    options: a string
     fix: false
     exclusive: true
 
