@@ -1,4 +1,17 @@
+lang: python
+
 python: 2.7
+
+env:
+  list-field: [1, 2, 3, 4, 5]
+  fix-field:
+    options: ['a', 'b', 'c']
+    fix: true
+  exclusive
+    options: a string
+    fix: false
+    exclusive: true
+    
 
 install:
   - echo "Install..."
