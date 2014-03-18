@@ -7,7 +7,7 @@ env:
   fix-field:
     options: ['a', 'b', 'c']
     fix: true
-  exclusive
+  exclusive:
     options: a string
     fix: false
     exclusive: true
