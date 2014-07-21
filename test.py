@@ -5,7 +5,7 @@ from uiautomator import device as d
 import os
 
 def loop(texts):
-    for view in d(clickable=True):
+    for view in d():
         if view.text:
             d(text=view.text).click()
             d.press.back()
