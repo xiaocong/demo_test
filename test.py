@@ -12,7 +12,7 @@ def loop(texts):
 
 def main():
     texts = []
-    d(scrollable=True).scroll.horiz.toBegining()
+    d(scrollable=True).scroll.horiz.toBeginning()
     while d(scrollable=True).scroll.horiz.forward(steps=10):
         loop(texts)
 
