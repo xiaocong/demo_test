@@ -4,21 +4,18 @@
 from uiautomator import device as d
 import os
 
-def settings():
-    if d(text='设置').exists:
-        d(text='设置').click()
-        d.screenshot(os.path.join(os.environ.get('WORKSPACE', '.'), 'screenshot.png'))
-        d.press.back()
+def loop(texts):
+    for view in d(clickable=True):
+        if view.text and view.text not in texts:
+            view.click()
+            d.press.back()
 
+def main():
+    texts = []
+    d(scrollable=True).scroll.horiz.toBegining()
+    while d(scrollable=True).scroll.horiz.forward(steps=10):
+        loop(texts)
 
-for k in os.environ:
-    print("%s:\t%s" % (k, os.environ[k]))
-
-for i in range(20000):
-    d.screen.on()
-    print("Swipe left")
-    d().swipe.left()
-    print("Swipe right")
-    d().swipe.right()
-    d.press.home()
-    settings()
+if __name__ == '__main__':
+    for i in range(100000):
+        main()
