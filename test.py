@@ -8,7 +8,7 @@ def loop(texts):
     for view in d():
         text = view.text
         if text:
-            print('Click ' + text)
+            print(u'Click ' + text)
             d(text=text).click()
             d.press.back()
             return True
