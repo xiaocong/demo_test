@@ -7,9 +7,10 @@ import os
 def loop(texts):
     for view in d():
         text = view.text
-        if text:
+        if text and text not in texts:
             d(text=text).click()
             d.press.back()
+            texts.append(text)
             return True
     else:
         return False
