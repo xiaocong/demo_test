@@ -6,8 +6,8 @@ import os
 
 def loop(texts):
     for view in d(clickable=True):
-        if view.text and view.text not in texts:
-            view.click()
+        if view.text:
+            d(text=view.text).click()
             d.press.back()
 
 def main():
