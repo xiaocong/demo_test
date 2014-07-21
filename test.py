@@ -9,7 +9,7 @@ def loop(texts):
         text = view.text
         if text and text not in texts:
             d(text=text).click()
-            d.press.back()
+            d.press.home()
             texts.append(text)
             return True
     else:
@@ -17,8 +17,8 @@ def loop(texts):
 
 def main():
     texts = []
-    d(scrollable=True).scroll.horiz.toBeginning()
-    while d(scrollable=True).scroll.horiz.forward(steps=10):
+    d().scroll.horiz.toBeginning()
+    while d().scroll.horiz.forward(steps=50):
         while loop(texts):
             pass
 
