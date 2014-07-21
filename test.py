@@ -18,7 +18,7 @@ def loop(texts):
 def main():
     texts = []
     d().scroll.horiz.toBeginning()
-    while d().scroll.horiz.forward(steps=50):
+    while d().scroll.horiz.forward(steps=10):
         while loop(texts):
             pass
 
