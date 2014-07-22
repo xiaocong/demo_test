@@ -3,25 +3,18 @@
 
 from uiautomator import device as d
 import os
-
-def loop(texts):
-    for view in d():
-        text = view.text
-        if text and text not in texts:
-            d(text=text).click()
-            d.press.home()
-            texts.append(text)
-            return True
-    else:
-        return False
+import time
 
 def main():
     texts = []
     d().scroll.horiz.toBeginning()
-    while d().scroll.horiz.forward(steps=10):
-        while loop(texts):
-            pass
-
+    while d(focused=True).exists and d(focused=True).text not in texts:
+        texts.append(d(focused=True).text)
+        d(focused=True).click()
+        time.sleep(1)
+        d.press.back()
+        d.press.right()
+            
 if __name__ == '__main__':
     for i in range(100000):
         main()
