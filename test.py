@@ -15,9 +15,11 @@ def main():
         else:
             pre = cur
         d(focused=True).click()
-        time.sleep(1)
+        d.wait.idle(3)
         d.press.home()
+        d.wait.idle(3)
         d.press.right()
+        d.wait.idle(3)
         
             
 if __name__ == '__main__':
