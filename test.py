@@ -12,7 +12,7 @@ def main():
         texts.append(d(focused=True).text)
         d(focused=True).click()
         time.sleep(1)
-        d.press.back()
+        d.press.home()
         d.press.right()
             
 if __name__ == '__main__':
