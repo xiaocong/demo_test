@@ -9,7 +9,7 @@ env:
     fix: true
   exclusive:
     fix: false
-    exclusive: true
+    exclusive: false
 
 install:
   - echo "Install..."
