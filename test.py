@@ -10,6 +10,7 @@ def main():
     pre = None
     while d(focused=True).exists:
         cur = d(focused=True).info
+        print cur['text']
         if cur == pre:
             break
         else:
